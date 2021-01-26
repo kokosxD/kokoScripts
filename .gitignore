@@ -1,3 +1,11 @@
+# Visual Studio
+.vs
+.vscode
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
 # Test
 Notes/
 
