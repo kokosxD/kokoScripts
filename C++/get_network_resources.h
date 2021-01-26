@@ -50,10 +50,10 @@ private:
 	){
 
 		// Get length of all strings
-		const unsigned int local_name_len = _local_name ? strlen(_local_name) : 0;
-		const unsigned int remote_name_len = _remote_name ? strlen(_remote_name) : 0;
-		const unsigned int provider_name_len = _provider_name ? strlen(_provider_name) : 0;
-		const unsigned int comment_len = _comment ? strlen(_comment) : 0;
+		const unsigned int local_name_len = _local_name ? static_cast<unsigned int>(strlen(_local_name)) : 0;
+		const unsigned int remote_name_len = _remote_name ? static_cast<unsigned int>(strlen(_remote_name)) : 0;
+		const unsigned int provider_name_len = _provider_name ? static_cast<unsigned int>(strlen(_provider_name)) : 0;
+		const unsigned int comment_len = _comment ? static_cast<unsigned int>(strlen(_comment)) : 0;
 
 		// Allocate a single block of memory that fits all strings including their null terminating characters
 		char* const str_net_rsc = new char[static_cast<unsigned long long int>(local_name_len) + remote_name_len + provider_name_len + comment_len + 4]{};
