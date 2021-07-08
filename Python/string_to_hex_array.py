@@ -38,5 +38,5 @@ if parsed_args.terminate:
 	hex_array.append("00")
 
 # Show output
-conv_hex_array = ", ".join(f"0x{hexadecimal}" for hexadecimal in hex_array)
+conv_hex_array = ", ".join(f"0x{hexadecimal}" if hexadecimal != "0" else "0x00" for hexadecimal in hex_array)
 print(f"Converted hexadecimal array\t==\t{{{conv_hex_array}}}")
